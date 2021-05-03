@@ -108,17 +108,17 @@ public final class Space: UIView {
     public init() {
         super.init(frame: .zero)
     }
-    
-    public init(h: CGFloat) {
-        super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: h).isActive = true
-    }
-    
+
     public init(w: CGFloat) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: w).isActive = true
+    }
+    
+    public init(h: CGFloat) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: h).isActive = true
     }
 
     required public init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
