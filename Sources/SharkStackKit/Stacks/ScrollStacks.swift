@@ -12,14 +12,14 @@ public extension UIView {
     @discardableResult
     func VScroll(safeArea: Bool = false, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
         return VStack(safeArea: safeArea) {
-            SharkStackKit.VScroll(views: views)
+            VScrollView(views: views)
         }
     }
 
     @discardableResult
     func HScroll(safeArea: Bool = false, fill: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
         return VStack(safeArea: safeArea) {
-            SharkStackKit.HScroll(views: views)
+            HScrollView(views: views)
             
             if !fill {
                 Space()
@@ -28,7 +28,7 @@ public extension UIView {
     }
 }
 
-public final class VScroll: UIStackView {
+public final class VScrollView: UIStackView {
     
     // MARK: - UI
     
@@ -70,7 +70,7 @@ public final class VScroll: UIStackView {
     required init(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-public final class HScroll: UIStackView {
+public final class HScrollView: UIStackView {
     
     // MARK: - UI
     

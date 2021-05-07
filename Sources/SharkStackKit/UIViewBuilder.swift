@@ -7,7 +7,7 @@
 
 import UIKit
 
-@_functionBuilder
+@resultBuilder
 public struct UIViewBuilder {
 
     public typealias Expression = UIView
