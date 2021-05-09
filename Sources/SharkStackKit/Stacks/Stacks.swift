@@ -10,8 +10,8 @@ import UIKit
 public extension UIView {
 
     @discardableResult
-    func ZStack(spacing: CGFloat = .zero, safeArea: Bool = false, @UIViewBuilder views: () -> [UIView]) -> UIView {
-        let stack = VStack{}
+    func ZStack(useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIView {
+        let stack = VStack(useSafeArea: useSafeArea) {}
         
         _ = views().map { (view: UIView) in
             stack.VStack { view }
@@ -21,19 +21,19 @@ public extension UIView {
     }
 
     @discardableResult
-    func VStack(spacing: CGFloat = .zero, safeArea: Bool = false, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
-        return createStack(.vertical, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: safeArea)
+    func VStack(spacing: CGFloat = .zero, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
+        return createStack(.vertical, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: useSafeArea)
     }
 
     @discardableResult
-    func HStack(spacing: CGFloat = .zero, safeArea: Bool = false, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
-        return createStack(.horizontal, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: safeArea)
+    func HStack(spacing: CGFloat = .zero, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
+        return createStack(.horizontal, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: useSafeArea)
     }
 }
 
-public final class ZStackView: UIView {
+public final class ZStack: UIView {
     
-    init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
+    public init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
         super.init(frame: .zero)
         
         let stack = VStack {}
@@ -46,8 +46,8 @@ public final class ZStackView: UIView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-public final class VStackView: UIStackView {
-    init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
+public final class VStack: UIStackView {
+    public init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
         super.init(frame: .zero)
         self.axis = .vertical
         self.spacing = spacing
@@ -57,8 +57,8 @@ public final class VStackView: UIStackView {
     required init(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-public final class HStackView: UIStackView {
-    init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
+public final class HStack: UIStackView {
+    public init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
         super.init(frame: .zero)
         self.axis = .horizontal
         self.spacing = spacing
@@ -80,6 +80,12 @@ public extension UIStackView {
     @discardableResult
     func alignment(_ alignment: UIStackView.Alignment) -> UIStackView {
         self.alignment = alignment
+        return self
+    }
+    
+    @discardableResult
+    func spacing(_ spacing: CGFloat) -> UIStackView {
+        self.spacing = spacing
         return self
     }
 
@@ -131,7 +137,7 @@ extension UIView {
                             views: [UIView], spacing: CGFloat = .zero,
                             alignment: UIStackView.Alignment = .fill,
                             distribution: UIStackView.Distribution = .fill,
-                            safeArea: Bool = true) -> UIStackView {
+                            safeArea: Bool) -> UIStackView {
         
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = axis

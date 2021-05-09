@@ -15,7 +15,7 @@ let package = Package(
         .package(
             name: "SharkUtils",
             url: "git@github.com:gymshark/ios-Shark-Utils.git",
-            .upToNextMinor(from: "1.0.0"))
+            ._branchItem("develop"))
     ],
     targets: [
         .target(
