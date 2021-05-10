@@ -52,7 +52,7 @@ final class MixedExampleVC: UIViewController {
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
         
-        view.VScroll(spacing: 10) {
+        view.ScrollView(spacing: 10) {
             
             headerStack
             

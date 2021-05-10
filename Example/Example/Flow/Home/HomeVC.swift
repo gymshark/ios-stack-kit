@@ -53,7 +53,7 @@ final class HomeVC: UIViewController {
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
         
-        view.VScroll(spacing: 15) {
+        view.ScrollView(spacing: 15) {
             
             verticalStackExample.withHeight(100)
             horizontalStackExample.withHeight(100)
