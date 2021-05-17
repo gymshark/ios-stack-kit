@@ -12,10 +12,7 @@ let package = Package(
             targets: ["SharkStackKit"]),
     ],
     dependencies: [
-        .package(
-            name: "SharkUtils",
-            url: "git@github.com:gymshark/ios-Shark-Utils.git",
-            ._branchItem("develop"))
+        .package(name: "SharkUtils", url: "git@github.com:gymshark/ios-Shark-Utils.git", .exact(Version("1.0.5")))
     ],
     targets: [
         .target(
@@ -23,6 +20,6 @@ let package = Package(
             dependencies: ["SharkUtils"]),
         .testTarget(
             name: "SharkStackKitTests",
-            dependencies: ["SharkStackKit"]),
+            dependencies: ["SharkStackKit", "SharkUtils"]),
     ]
 )

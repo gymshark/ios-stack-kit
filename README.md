@@ -20,7 +20,7 @@ If you are trying to use SharkStackKit to handle large data sets to replace a UI
 
 **Swift Package Manager (SPM)**
 
-To install SharkStackKit using [Swift Package Manager](https://github.com/apple/swift-package-manager) you can follow the [tutorial published by Apple](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) using the URL for the SharkListKit repo with the current version:
+To install SharkStackKit using [Swift Package Manager](https://github.com/apple/swift-package-manager) you can follow the [tutorial published by Apple](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) using the URL for the SharkStackKit repo with the current version:
 
 \1. In Xcode, select “File” → “Swift Packages” → “Add Package Dependency”
 

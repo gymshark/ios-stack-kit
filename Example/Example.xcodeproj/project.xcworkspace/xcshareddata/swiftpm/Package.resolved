@@ -5,9 +5,9 @@
         "package": "SharkUtils",
         "repositoryURL": "git@github.com:gymshark/ios-Shark-Utils.git",
         "state": {
-          "branch": "develop",
-          "revision": "7fcf96b6edd4fa72f50cf9a193d6ad146a1032d3",
-          "version": null
+          "branch": null,
+          "revision": "377455779103d45f537ae202b2dbb8575575dc92",
+          "version": "1.0.5"
         }
       }
     ]
