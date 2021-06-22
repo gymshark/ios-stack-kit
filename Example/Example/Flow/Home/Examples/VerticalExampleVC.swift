@@ -54,7 +54,7 @@ final class VerticalExampleVC: UIViewController {
             button1.withHeight(100)
             button2.withHeight(50)
             label
-            Space()
+            Spacer()
         }.margin(.top(20))
     }
 }

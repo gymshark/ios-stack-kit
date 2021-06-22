@@ -107,7 +107,7 @@ public extension UIStackView {
     }
 }
 
-public final class Space: UIView {
+public final class Spacer: UIView {
 
     // MARK: - Init
     

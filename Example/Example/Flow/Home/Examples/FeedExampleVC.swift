@@ -53,9 +53,9 @@ final class PostView: UIView {
         
         VStack {
             image.withAspectRatio(2.5)
-            Space(h: 15)
+            Spacer(h: 15)
             title
-            Space(h: 10)
+            Spacer(h: 10)
             context
         }.margin(.bottom(20))
     }

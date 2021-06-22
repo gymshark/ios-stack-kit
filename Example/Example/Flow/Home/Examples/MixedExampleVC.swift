@@ -76,7 +76,7 @@ final class MixedExampleVC: UIViewController {
                 }
             }.distribution(.equalSpacing)
             
-            Space()
+            Spacer()
         }.margin(.top(20))
     }
 }
