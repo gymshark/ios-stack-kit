@@ -13,12 +13,12 @@ public extension UIView {
     @discardableResult
     func ScrollView(spacing: CGFloat = .zero, showsIndicators: Bool = true, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
         return VStack(useSafeArea: useSafeArea) {
-            ScrollView(spacing: spacing, showsIndicators: showsIndicators, views: views)
+            ScrollViewContainer(spacing: spacing, showsIndicators: showsIndicators, views: views)
         }
     }
 }
 
-public final class ScrollView: UIStackView {
+public final class ScrollViewContainer: UIStackView {
     
     // MARK: - UI
     
