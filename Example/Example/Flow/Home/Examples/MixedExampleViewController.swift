@@ -1,5 +1,5 @@
 //
-//  MixedStackVC.swift
+//  MixedExampleViewController.swift
 //  Example
 //
 //  Created by Russell Warwick on 09/05/2021.
@@ -9,7 +9,7 @@ import UIKit
 import SharkStackKit
 import SharkUtils
 
-final class MixedExampleVC: UIViewController {
+final class MixedExampleViewController: UIViewController {
     
     // MARK: - UI
     

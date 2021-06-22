@@ -1,5 +1,5 @@
 //
-//  HorizontalExampleVC.swift
+//  HorizontalExampleViewController.swift
 //  Example
 //
 //  Created by Russell Warwick on 09/05/2021.
@@ -9,7 +9,7 @@ import UIKit
 import SharkStackKit
 import SharkUtils
 
-final class HorizontalExampleVC: UIViewController {
+final class HorizontalExampleViewController: UIViewController {
     
     // MARK: - UI
     

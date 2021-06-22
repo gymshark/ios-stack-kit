@@ -1,4 +1,6 @@
-## <img src="https://i.ibb.co/TBpKFYB/Screenshot-2021-05-10-at-02-07-24.png" style="zoom:30%;" />
+
+
+<img  width="1000" alt="swift_standards" src="stack-kit-logo.png" >
 
 SharkStackKit is a libary that extends UIStackView and combines the power of ResultBuilders to give you the power to easily build declarative UI's with [UIKit](https://developer.apple.com/documentation/uikit). If If you like the style of building SwiftUI layouts but your project is using UIKit then SharkStackKit is a great intermediate substituion without having any breaking changes. 
 

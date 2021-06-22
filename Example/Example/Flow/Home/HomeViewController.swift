@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  HomeViewController.swift
 //  Example
 //
 //  Created by Russell Warwick on 09/05/2021.
@@ -9,31 +9,31 @@ import UIKit
 import SharkStackKit
 import SharkUtils
 
-final class HomeVC: UIViewController {
+final class HomeViewController: UIViewController {
     
     // MARK: - UI
     
     private lazy var verticalStackExample = TestButton(text: "Vertical Stack").with {
         $0.touchUpInside.action = { [weak self] in
-            self?.show(VerticalExampleVC(), sender: self)
+            self?.show(VerticalExampleViewController(), sender: self)
         }
     }
     
     private lazy var horizontalStackExample = TestButton(text: "Horizontal Stack").with {
         $0.touchUpInside.action = { [weak self] in
-            self?.show(HorizontalExampleVC(), sender: self)
+            self?.show(HorizontalExampleViewController(), sender: self)
         }
     }
     
     private lazy var feedExample =  TestButton(text: "Feed Example").with {
         $0.touchUpInside.action = { [weak self] in
-            self?.show(FeedExampleVC(), sender: self)
+            self?.show(FeedExampleViewController(), sender: self)
         }
     }
     
     private lazy var mixedExample =  TestButton(text: "Mixed Example").with {
         $0.touchUpInside.action = { [weak self] in
-            self?.show(MixedExampleVC(), sender: self)
+            self?.show(MixedExampleViewController(), sender: self)
         }
     }
 

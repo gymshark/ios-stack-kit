@@ -9,7 +9,7 @@ import UIKit
 import SharkStackKit
 import SharkUtils
 
-final class VerticalExampleVC: UIViewController {
+final class VerticalExampleViewController: UIViewController {
     
     // MARK: - UI
     

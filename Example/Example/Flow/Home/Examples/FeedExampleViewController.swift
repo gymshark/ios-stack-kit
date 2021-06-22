@@ -1,5 +1,5 @@
 //
-//  FeedExampleVC.swift
+//  FeedExampleViewController.swift
 //  Example
 //
 //  Created by Russell Warwick on 09/05/2021.
@@ -61,7 +61,7 @@ final class PostView: UIView {
     }
 }
 
-final class FeedExampleVC: UIViewController {
+final class FeedExampleViewController: UIViewController {
     
     // MARK: - Data
     
