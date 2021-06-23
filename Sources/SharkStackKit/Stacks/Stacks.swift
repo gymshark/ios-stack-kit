@@ -22,12 +22,12 @@ public extension UIView {
 
     @discardableResult
     func VStack(spacing: CGFloat = .zero, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
-        return createStack(.vertical, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: useSafeArea)
+        return createStack(.vertical, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, useSafeArea: useSafeArea)
     }
 
     @discardableResult
     func HStack(spacing: CGFloat = .zero, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
-        return createStack(.horizontal, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, safeArea: useSafeArea)
+        return createStack(.horizontal, views: views(), spacing: spacing, alignment: .fill, distribution: .fill, useSafeArea: useSafeArea)
     }
 }
 
@@ -138,7 +138,7 @@ extension UIView {
                             views: [UIView], spacing: CGFloat = .zero,
                             alignment: UIStackView.Alignment = .fill,
                             distribution: UIStackView.Distribution = .fill,
-                            safeArea: Bool) -> UIStackView {
+                            useSafeArea: Bool) -> UIStackView {
         
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = axis
@@ -149,7 +149,7 @@ extension UIView {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        if safeArea {
+        if useSafeArea {
             NSLayoutConstraint.activate([
                 stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .zero),
                 stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: .zero),
