@@ -25,7 +25,7 @@ final class VerticalExampleViewController: UIViewController {
     
     private let button2 = UIButton().with {
         $0.backgroundColor = .orange
-        $0.setTitle("Me", for: .normal)
+        $0.setTitle("VerticalExample", for: .normal)
     }
     
     private let label = UILabel().with {

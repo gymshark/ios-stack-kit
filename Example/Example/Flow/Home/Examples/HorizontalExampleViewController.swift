@@ -25,7 +25,7 @@ final class HorizontalExampleViewController: UIViewController {
     
     private let button2 = UIButton().with {
         $0.backgroundColor = .orange
-        $0.setTitle("Me", for: .normal)
+        $0.setTitle("HorizontalExample", for: .normal)
     }
     
     private let label = UILabel().with {
@@ -51,6 +51,7 @@ final class HorizontalExampleViewController: UIViewController {
         view.backgroundColor = Constants.colors.background
         
         view.VStack {
+          
             HStack {
                 button1.withWidth(100)
                 button2.withWidth(50)

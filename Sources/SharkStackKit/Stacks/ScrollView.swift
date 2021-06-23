@@ -11,14 +11,14 @@ import SharkUtils
 public extension UIView {
 
     @discardableResult
-    func ScrollView(spacing: CGFloat = .zero, showsIndicators: Bool = true, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
+    func VScroll(spacing: CGFloat = .zero, inset: UIEdgeInsets = .zero, showsIndicators: Bool = true, useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
         return VStack(useSafeArea: useSafeArea) {
-            ScrollViewContainer(spacing: spacing, showsIndicators: showsIndicators, views: views)
+            ScrollViewContainer(spacing: spacing, inset: inset, showsIndicators: showsIndicators, views: views)
         }
     }
 }
 
-public final class ScrollViewContainer: UIStackView {
+fileprivate final class ScrollViewContainer: UIStackView {
     
     // MARK: - UI
     
@@ -38,11 +38,11 @@ public final class ScrollViewContainer: UIStackView {
     
     // MARK: - Init
     
-    public init(spacing: CGFloat = .zero, showsIndicators: Bool = true, @UIViewBuilder views: () -> [UIView]) {
+    public init(spacing: CGFloat = .zero, inset: UIEdgeInsets = .zero, showsIndicators: Bool = true, @UIViewBuilder views: () -> [UIView]) {
         super.init(frame: .zero)
 
         addArrangedSubview(scrollView)
-        
+                
         scrollView.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -56,6 +56,7 @@ public final class ScrollViewContainer: UIStackView {
 
         stackView.addArrangedSubViews(views())
         stackView.spacing(spacing)
+        stackView.margin(inset)
         
         scrollView.showsVerticalScrollIndicator = showsIndicators
     }

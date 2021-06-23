@@ -52,11 +52,11 @@ final class MixedExampleViewController: UIViewController {
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
         
-        view.ScrollView(spacing: 10) {
+        view.VScroll(spacing: 10) {
             
             headerStack
             
-            settingsStack
+            settingsStack    
     
             HStack(spacing: 5) {
                 TestLabel(text: "Calander").withHeight(80)

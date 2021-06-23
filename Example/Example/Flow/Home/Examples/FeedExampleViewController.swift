@@ -88,10 +88,10 @@ final class FeedExampleViewController: UIViewController {
         /// Note: You will face performance issues if you're trying to use this for a large dataset. For large datasets you will want to use SharkListKit.
         /// https://github.com/gymshark/ios-shark-list-kit
         
-        view.ScrollView(spacing: 20) {
+        view.VScroll(spacing: 20, inset: .all(25)) {
             posts.compactMap({
                 PostView(post: $0)
             })
-        }.margin(.horizontal(20))
+        }
     }
 }
