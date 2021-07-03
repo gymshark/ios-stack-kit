@@ -56,5 +56,6 @@ final class VerticalExampleViewController: UIViewController {
             label
             Spacer()
         }.margin(.top(20))
+        .withBackground(.red)
     }
 }
