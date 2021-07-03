@@ -31,7 +31,7 @@ final class VerticalExampleViewController: UIViewController {
     private let label = UILabel().with {
         $0.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et viverra ipsum. Nullam mauris justo, gravida vel risus semper, pellentesque malesuada leo. Integer leo dui, dignissim ac eros in, bibendum pretium eros. Phasellus vel arcu in risus porta tempor ut et ante. Sed neque nibh, venenatis et elit sed, elementum pulvinar risus. Donec sed nunc vestibulum nulla feugiat sagittis id non justo. Pellentesque bibendum commodo nisi et fringilla."
         $0.textColor = .black
-        $0.backgroundColor = .white
+        $0.backgroundColor = .clear
         $0.numberOfLines = 0
     }
 
@@ -49,7 +49,7 @@ final class VerticalExampleViewController: UIViewController {
 
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
-        
+
         view.VStack {
             button1.withHeight(100)
             button2.withHeight(50)

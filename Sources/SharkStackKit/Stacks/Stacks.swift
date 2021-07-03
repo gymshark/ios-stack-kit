@@ -10,14 +10,14 @@ import UIKit
 public extension UIView {
 
     @discardableResult
-    func ZStack(useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIView {
-        let stack = VStack(useSafeArea: useSafeArea) {}
+    func ZStack(useSafeArea: Bool = true, @UIViewBuilder views: () -> [UIView]) -> UIStackView {
+        let container = UIView()
         
-        _ = views().map { (view: UIView) in
-            stack.VStack { view }
+        views().forEach { view in
+            container.VStack { view }
         }
-        
-        return stack
+
+        return VStack { container }
     }
 
     @discardableResult
@@ -31,19 +31,22 @@ public extension UIView {
     }
 }
 
-public final class ZStack: UIView {
+public final class ZStack: UIStackView {
     
-    public init(spacing: CGFloat = .zero, @UIViewBuilder views: () -> [UIView]) {
+    public init(@UIViewBuilder views: () -> [UIView]) {
         super.init(frame: .zero)
+        self.axis = .vertical
         
-        let stack = VStack {}
+        let container = UIView()
         
-        _ = views().map { (view: UIView) in
-            stack.VStack { view }
+        views().forEach { view in
+            container.VStack { view }
         }
+        
+        addArrangedSubview(container)
     }
 
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    required init(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
 public final class VStack: UIStackView {
@@ -96,7 +99,7 @@ public extension UIStackView {
     }
     
     @discardableResult
-    func background(_ color: UIColor, cornerRadius: CGFloat = .zero) -> UIStackView {
+    func withBackground(_ color: UIColor, cornerRadius: CGFloat = .zero) -> UIStackView {
         let view = UIView(frame: bounds)
         view.backgroundColor = color
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
