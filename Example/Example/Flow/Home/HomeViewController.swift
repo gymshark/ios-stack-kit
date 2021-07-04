@@ -53,12 +53,15 @@ final class HomeViewController: UIViewController {
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
         
-        view.VScroll(spacing: 15, inset: .all(20)) {
+        view.VScroll(useSafeArea: false) {
             
             verticalStackExample.withHeight(100)
             horizontalStackExample.withHeight(100)
             mixedExample.withHeight(100)
             feedExample.withHeight(100)
-        }
+            
+        }.margin(.all(50))
+        .spacing(10)
+        .withBackground(.red)
     }
 }

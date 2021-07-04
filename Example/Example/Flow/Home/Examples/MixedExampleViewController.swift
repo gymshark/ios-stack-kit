@@ -52,13 +52,13 @@ final class MixedExampleViewController: UIViewController {
     private func setConstraints(){
         view.backgroundColor = Constants.colors.background
         
-        view.VScroll(spacing: 10) {
+        view.VScroll {
             
             headerStack
             
             settingsStack    
     
-            HStack(spacing: 5) {
+            VStack(spacing: 5) {
                 TestLabel(text: "Calander").withHeight(80)
                 TestLabel(text: "Contacts").withHeight(80)
             }.distribution(.fillEqually)
@@ -77,6 +77,13 @@ final class MixedExampleViewController: UIViewController {
             }.distribution(.equalSpacing)
             
             Spacer()
-        }.margin(.top(20))
+        }.margin(.all(20))
+        .scrollDelegate(self)
+    }
+}
+
+extension MixedExampleViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
     }
 }

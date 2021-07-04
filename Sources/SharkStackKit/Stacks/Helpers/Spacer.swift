@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Spacer.swift
 //  
 //
 //  Created by Russell Warwick on 03/07/2021.
@@ -13,6 +13,13 @@ public final class Spacer: UIView {
     
     public init() {
         super.init(frame: .zero)
+    }
+    
+    public init(square: CGFloat) {
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: square).isActive = true
+        heightAnchor.constraint(equalToConstant: square).isActive = true
     }
 
     public init(w: CGFloat) {
