@@ -7,7 +7,7 @@
 
 import UIKit
 import SharkStackKit
-import SharkUtils
+import ConstraintKit
 
 struct Post {
     let title: String

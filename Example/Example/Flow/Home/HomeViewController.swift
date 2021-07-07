@@ -7,7 +7,9 @@
 
 import UIKit
 import SharkStackKit
+import ConstraintKit
 import SharkUtils
+
 
 final class HomeViewController: UIViewController {
     
@@ -60,7 +62,7 @@ final class HomeViewController: UIViewController {
             mixedExample.withHeight(100)
             feedExample.withHeight(100)
             
-        }.margin(.all(50))
+        }.margin(UIEdgeInsets.all(50))
         .spacing(10)
         .withBackground(.red)
     }

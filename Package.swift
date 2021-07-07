@@ -12,14 +12,14 @@ let package = Package(
             targets: ["SharkStackKit"]),
     ],
     dependencies: [
-        .package(name: "SharkUtils", url: "git@github.com:gymshark/ios-Shark-Utils.git", .exact(Version("1.0.5")))
+        .package(name: "ConstraintKit", url: "git@github.com:gymshark/constraint-kit.git", .exact(Version("0.0.1")))
     ],
     targets: [
         .target(
             name: "SharkStackKit",
-            dependencies: ["SharkUtils"]),
+            dependencies: ["ConstraintKit"]),
         .testTarget(
             name: "SharkStackKitTests",
-            dependencies: ["SharkStackKit", "SharkUtils"]),
+            dependencies: ["SharkStackKit", "ConstraintKit"]),
     ]
 )

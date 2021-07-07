@@ -16,6 +16,7 @@
 		BCB97F4D268234D700AE0968 /* VerticalExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F47268234D700AE0968 /* VerticalExampleViewController.swift */; };
 		BCB97F4E268234D700AE0968 /* FeedExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F48268234D700AE0968 /* FeedExampleViewController.swift */; };
 		BCB97F4F268234D700AE0968 /* MixedExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB97F49268234D700AE0968 /* MixedExampleViewController.swift */; };
+		BCD6DCE626966F0B00D2E481 /* SharkUtils in Frameworks */ = {isa = PBXBuildFile; productRef = BCD6DCE526966F0B00D2E481 /* SharkUtils */; };
 		BCE7C5712648753A00515A05 /* TestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7C5702648753A00515A05 /* TestLabel.swift */; };
 		BCE7C5762648763000515A05 /* TestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7C5752648763000515A05 /* TestButton.swift */; };
 		BCE7C57B26489DA200515A05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7C57A26489DA200515A05 /* Constants.swift */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD6DCE626966F0B00D2E481 /* SharkUtils in Frameworks */,
 				BC5020F52645EF5900E7E234 /* SharkStackKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +162,7 @@
 			name = Example;
 			packageProductDependencies = (
 				BC5020F42645EF5900E7E234 /* SharkStackKit */,
+				BCD6DCE526966F0B00D2E481 /* SharkUtils */,
 			);
 			productName = Example;
 			productReference = BC5020DA2645EAE400E7E234 /* Example.app */;
@@ -188,6 +191,9 @@
 				Base,
 			);
 			mainGroup = BC5020D12645EAE400E7E234;
+			packageReferences = (
+				BCD6DCE426966F0B00D2E481 /* XCRemoteSwiftPackageReference "ios-shark-utils" */,
+			);
 			productRefGroup = BC5020DB2645EAE400E7E234 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,10 +425,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BCD6DCE426966F0B00D2E481 /* XCRemoteSwiftPackageReference "ios-shark-utils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:gymshark/ios-shark-utils.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BC5020F42645EF5900E7E234 /* SharkStackKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SharkStackKit;
+		};
+		BCD6DCE526966F0B00D2E481 /* SharkUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD6DCE426966F0B00D2E481 /* XCRemoteSwiftPackageReference "ios-shark-utils" */;
+			productName = SharkUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
