@@ -7,6 +7,7 @@
 
 import UIKit
 import StackKit
+import ConstraintKit
 
 final class FeedItemCell: UITableViewCell {
     

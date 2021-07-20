@@ -12,7 +12,6 @@ let package = Package(
             targets: ["StackKit"]),
     ],
     dependencies: [
-//        .package(name: "ConstraintKit", url: "git@github.com:gymshark/constraint-kit.git", .exact(Version("0.0.1")))
     ],
     targets: [
         .target(
