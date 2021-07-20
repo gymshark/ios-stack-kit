@@ -1,7 +1,7 @@
 import XCTest
 
-import SharkStackKitTests
+import StackKitTests
 
 var tests = [XCTestCaseEntry]()
-tests += SharkStackKitTests.allTests()
+tests += StackKitTests.allTests()
 XCTMain(tests)

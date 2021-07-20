@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "SharkStackKit",
+    name: "StackKit",
     platforms: [ .iOS(.v12)],
     products: [
         .library(
-            name: "SharkStackKit",
-            targets: ["SharkStackKit"]),
+            name: "StackKit",
+            targets: ["StackKit"]),
     ],
     dependencies: [
-        .package(name: "ConstraintKit", url: "git@github.com:gymshark/constraint-kit.git", .exact(Version("0.0.1")))
+//        .package(name: "ConstraintKit", url: "git@github.com:gymshark/constraint-kit.git", .exact(Version("0.0.1")))
     ],
     targets: [
         .target(
-            name: "SharkStackKit",
-            dependencies: ["ConstraintKit"]),
+            name: "StackKit",
+            dependencies: []),
         .testTarget(
-            name: "SharkStackKitTests",
-            dependencies: ["SharkStackKit", "ConstraintKit"]),
+            name: "StackKitTests",
+            dependencies: ["StackKit"]),
     ]
 )

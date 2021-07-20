@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ConstraintKit",
-        "repositoryURL": "git@github.com:gymshark/constraint-kit.git",
-        "state": {
-          "branch": null,
-          "revision": "56bcc23e57d687ee48c03113d5c722293d5e9c9c",
-          "version": "0.0.1"
-        }
-      },
-      {
         "package": "SharkUtils",
         "repositoryURL": "git@github.com:gymshark/ios-shark-utils.git",
         "state": {
