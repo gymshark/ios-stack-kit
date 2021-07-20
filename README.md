@@ -8,7 +8,7 @@ StackKit harnesses the power of [UIStackView's](https://developer.apple.com/docu
 
 |                      Feed                      |                      Account                      |
 | :------------------------------------------------: | :--------------------------------------------: |
-| ![](Assets/example-1.png) | ![](Assets/example-2.png)) |
+| ![](Assets/example-1.png) | ![](Assets/example-2.png) |
 
 ## Why StackKit?
 
