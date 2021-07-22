@@ -11,8 +11,7 @@ let package = Package(
             name: "StackKit",
             targets: ["StackKit"]),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "StackKit",

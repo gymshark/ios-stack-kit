@@ -15,3 +15,8 @@ public extension UIView {
     }
 }
 
+extension UIStackView {
+    func addArrangedSubViews(_ views: [UIView]) {
+        views.forEach { addArrangedSubview($0) }
+    }
+}

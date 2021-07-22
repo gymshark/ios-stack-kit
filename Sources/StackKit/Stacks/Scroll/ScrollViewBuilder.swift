@@ -6,22 +6,25 @@
 //
 
 import UIKit
-import SharkUtils
 
 open class ScrollViewBuilder: UIView {
     
     // MARK: - UI
         
-    private let scrollView = UIScrollView().with {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.showsHorizontalScrollIndicator = false
-        $0.showsVerticalScrollIndicator = false
-    }
-    
-    private let stackView = UIStackView().with {
-        $0.alignment = .fill
-        $0.translatesAutoresizingMaskIntoConstraints = false
-    }
+    private let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.showsHorizontalScrollIndicator = false
+        sv.showsVerticalScrollIndicator = false
+        return sv
+    }()
+        
+    private let stackView: UIStackView = {
+        let sv = UIStackView()
+        sv.alignment = .fill
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        return sv
+    }()
     
     // MARK: - Init
     
