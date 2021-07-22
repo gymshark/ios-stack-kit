@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
-        "package": "SharkUtils",
-        "repositoryURL": "git@github.com:gymshark/ios-Shark-Utils.git",
+        "package": "ConstraintKit",
+        "repositoryURL": "git@github.com:gymshark/ios-constraint-kit.git",
         "state": {
           "branch": null,
-          "revision": "377455779103d45f537ae202b2dbb8575575dc92",
-          "version": "1.0.5"
+          "revision": "20069bdb8db549339d12af7836913e00597aa6d8",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "package": "SharkUtils",
+        "repositoryURL": "git@github.com:gymshark/ios-shark-utils.git",
+        "state": {
+          "branch": null,
+          "revision": "aef1ed76f2d69b8be1c0a0ed664dfad2fd55aa1f",
+          "version": "1.0.6"
         }
       }
     ]

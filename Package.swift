@@ -4,22 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "SharkStackKit",
+    name: "StackKit",
     platforms: [ .iOS(.v12)],
     products: [
         .library(
-            name: "SharkStackKit",
-            targets: ["SharkStackKit"]),
+            name: "StackKit",
+            targets: ["StackKit"]),
     ],
-    dependencies: [
-        .package(name: "SharkUtils", url: "git@github.com:gymshark/ios-Shark-Utils.git", .exact(Version("1.0.5")))
-    ],
+    dependencies: [],
     targets: [
         .target(
-            name: "SharkStackKit",
-            dependencies: ["SharkUtils"]),
+            name: "StackKit",
+            dependencies: []),
         .testTarget(
-            name: "SharkStackKitTests",
-            dependencies: ["SharkStackKit", "SharkUtils"]),
+            name: "StackKitTests",
+            dependencies: ["StackKit"]),
     ]
 )
