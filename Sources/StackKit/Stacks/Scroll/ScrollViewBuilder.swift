@@ -38,13 +38,9 @@ open class ScrollViewBuilder: UIView {
         if axis == .vertical {
             stackView.axis = .vertical
             stackView.distribution = .equalSpacing
-            scrollView.alwaysBounceVertical = true
-            scrollView.alwaysBounceHorizontal = false
             stackView.widthAnchor.constraint(equalTo:scrollView.widthAnchor).isActive = true
             
         } else {
-            scrollView.alwaysBounceVertical = false
-            scrollView.alwaysBounceHorizontal = true
             stackView.axis = .horizontal
             stackView.distribution = .fillEqually
             stackView.alignment = .center
@@ -98,6 +94,18 @@ public extension ScrollViewBuilder {
     @discardableResult
     func showHorizontalIndicators(_ value: Bool) -> Self {
         scrollView.showsHorizontalScrollIndicator = value
+        return self
+    }
+    
+    @discardableResult
+    func alwaysBounceHorizontal(_ value: Bool) -> Self {
+        scrollView.alwaysBounceHorizontal = value
+        return self
+    }
+    
+    @discardableResult
+    func alwaysBounceVertical(_ value: Bool) -> Self {
+        scrollView.alwaysBounceVertical = value
         return self
     }
     
