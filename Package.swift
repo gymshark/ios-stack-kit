@@ -11,11 +11,15 @@ let package = Package(
             name: "StackKit",
             targets: ["StackKit"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(name: "ConstraintKit",
+                 url: "git@github.com:gymshark/ios-constraint-kit.git",
+                 .upToNextMinor(from: "0.0.2"))
+    ],
     targets: [
         .target(
             name: "StackKit",
-            dependencies: []),
+            dependencies: ["ConstraintKit"]),
         .testTarget(
             name: "StackKitTests",
             dependencies: ["StackKit"]),

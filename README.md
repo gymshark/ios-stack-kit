@@ -12,9 +12,9 @@ StackKit harnesses the power of [UIStackView's](https://developer.apple.com/docu
 
 ## Why StackKit?
 
-The main advantage StackKit has over a standard programtatic constraints based approach is maintainance and flexibility. You can quickly change your layout by simply moving the ordering of a couple of views. No more painful rearranging of anchors e.c.t. You can also evaluating conditionals within the UI code, adding boolean properties, loops maps and more. 
+The main advantage StackKit has over a standard programmatic constraints-based approach is maintenance and flexibility. You can quickly change your layout by simply moving the ordering of a couple of views. No more painful rearranging of anchors e.c.t. You can also evaluate conditionals within the UI code, adding boolean properties, loops maps, and more. 
 
-We've made some Example screens and code samples, would defitnietly recomend starting there to grasp how powerful and simplistic StackKit is. Wwe hope to see it in your projects in the near future 🙂
+We've made some Example screens and code samples would definitely recommend starting there to grasp how powerful and simplistic StackKit is. We hope to see it in your projects in the near future 🙂
 
 StackKit is built and maintained with love by the Gymshark Engineering Team 💙📱
 
@@ -23,7 +23,7 @@ StackKit is built and maintained with love by the Gymshark Engineering Team 💙
 - You still want to use UIKit throughout your app
 - Harness the power of building UI like SwiftUI does but your team/project isn’t ready for reactive programming.
 - It’s easier to integrate into existing code bases. With SwiftUI you can’t swap a **View** for a **UIView**. This makes it hard to integrate old UI components into SwiftUI.
-- SwiftUI hides the underlying view rendering therefore making it hard to see what is actually going on and refine issues. With StackKit you are still within UIKit so don't loose any abilities.
+- SwiftUI hides the underlying view rendering, therefore making it hard to see what is actually going on and refine issues. With StackKit you are still within UIKit so don't lose any abilities.
 
 ### Note ⚠️
 
@@ -41,11 +41,11 @@ To install StackKit using [Swift Package Manager](https://github.com/apple/swift
 
 ## Getting Started
 
-StackKit works by extending off of any `UIView`, adding a `UIStackView` to the parents subview, setting the constraints and then appending the views to the stack provided to it via the [ResultBuilder](https://github.com/apple/swift-evolution/blob/main/proposals/0289-result-builders.md) This process makes laying out you UI programatically effortless and because it is simply using [UIStackView](https://developer.apple.com/documentation/uikit/uistackview) underneath, all the same layout logic still applies. 
+StackKit works by extending off of any `UIView`, adding a `UIStackView` to the parents' subview, setting the constraints, and then appending the views to the stack provided to it via the [ResultBuilder](https://github.com/apple/swift-evolution/blob/main/proposals/0289-result-builders.md) This process makes laying out you UI programmatically effortless and because it is simply using [UIStackView](https://developer.apple.com/documentation/uikit/uistackview) underneath, all of the same layout logic still applies. 
 
 If you haven't used UIStackView's before or need a refresher, I highly recommend checking out this [article](https://www.raywenderlich.com/2198310-uistackview-tutorial-for-ios-introducing-stack-views). Result builders are also key to the power of StackKit as well as SwiftUI. To get a better understanding of them check out this [article](https://www.swiftbysundell.com/articles/deep-dive-into-swift-function-builders/). They are awesome 🔥.
 
-With StackKit there is 4 main types of Stacks that you can use. VStack, HStack, VScroll and HScroll. Here are some common code examples below to help you get started with StackKit by extending off your UIView's.
+With StackKit there are 4 main types of Stacks that you can use. VStack, HStack, VScroll and HScroll. Here are some common code examples below to help you get started with StackKit by extending off your UIView's.
 
 #### UIViewController
 
@@ -86,9 +86,9 @@ class ProfileView: UIView {
 
 ---
 
-## Stack's within stack's... (Stackception 🤯)
+## Stack's within stack's... ([Stackception](Assets/stackwithinastack.png) 🤯)
 
-Above you can see how extending off a UIView and placing UIView items within a Stack is relitavly straightforward process. But what about putting a stack within a stack? Because our result builder is expecting type of UIViews we can simply pass in another Stack which inturn also excepts UIViews. For this though we need to use a Class variant of the Stacks instead of extending off of a UIView. Thankfully this is all taken care of and you don't need to do anything differently. Here is a nice example of stacks within stacks.
+Above you can see how extending off a UIView and placing UIView items within a Stack is a relatively straightforward process. But what about putting a stack within a stack? Because our result builder is expecting type is a UIView, we can simply pass in another Stack which inturn also excepts UIViews. But, for this, we need to use a Class variant of the Stack instead of extending off of a UIView. Thankfully this is all taken care of and you don't need to do anything differently. Here is a nice example of stacks within stacks.
 
 ---
 
@@ -125,11 +125,11 @@ class ProductsView: UIView {
 
 You might be asking but how do I control the layout, what about sizing constraints and setting spacing and padding. Don't worry we have you covered. 
 
-📝 Note: StackKit comes with a handy repo called [ConstraintsKit](https://github.com/gymshark/ios-constraint-kit). It makes writing Anchors, CGSize, UIEdgeInsets far easier with less bolierplate and some nice little extensions.
+📝 Note: StackKit comes with a handy repo called [ConstraintsKit](https://github.com/gymshark/ios-constraint-kit). It makes writing Anchors, CGSize, UIEdgeInsets far easier with less boilerplate and some nice little extensions.
 
 ### Advanced stack layout 
 
-To have greater control over how a particular Stack handles the layout of its views you can access it's `alignment` and `distribution` properties by chaining off the Stack. You can find out more about how to best utilise these properties for your specific needs in these articles
+To have greater control over how a particular Stack handles the layout of its views you can access its `alignment` and `distribution` properties by chaining off the Stack. You can find out more about how to best utilize these properties for your specific needs in these articles.
 
 • https://www.hackingwithswift.com/example-code/uikit/what-are-the-different-uistackview-distribution-types
 • https://www.raywenderlich.com/2198310-uistackview-tutorial-for-ios-introducing-stack-views
@@ -155,7 +155,7 @@ VStack {
 
 ### Spacing 
 
-At somepoint you will want to provide some spacing between your items. Thankfully with UIStackViews this is simple. We can chain off the specific stack using the `.spacing` function. As well as this we can also add some unique spacing in places where required using the `Spacing` class. Its worth noting that you will want to use this class when you would like the remaining area in a Stack to be taken up by an empty view.
+At some point, you will want to provide some spacing between your items. Thankfully with UIStackViews this is simple. We can chain off the specific stack using the `.spacing` function. As well as this we can also add some unique spacing in places where required using the `Spacing` class. It's worth noting that you will want to use this class when you would like the remaining area in a Stack to be taken up by an empty view.
 
 ---
 
@@ -185,7 +185,7 @@ VStack {
 
 ### Margin 
 
-Applying padding around a stack is made alot easier with UIStackViews `layoutMargins` which takes a UIEdgeInset property. To use this with your stack you can just chain off the stack again using the `.margin()` function. This provides a great way of giving spacing around views without lots of complex layout code.
+Applying padding around a stack is made a lot easier with UIStackViews `layoutMargins` which takes a UIEdgeInset property. To use this with your stack you can just chain off the stack again using the `.margin()` function. This provides a great way of giving spacing around views without lots of complex layout code.
 
 ---
 
@@ -211,7 +211,7 @@ VStack {
 
 ### Sizing 
 
-Sizing of views can still be achieved using standard NSLayout anchors width and height. Althrough we prefer to use some handy extensions to make this alot easier. Simply chain off any few you want to apply an explict size to using `.with()` notation. You will notice we have width, height and square extensions available. Because we are using stacks you don't need to worry about your other views. They will exapand and contract where needed. You can even apply sizing to yours stacks if you wish to.
+Sizing of views can still be achieved using standard NSLayout anchors width and height. Although we prefer to use some handy extensions to make this a lot easier from [ConstraintsKit](https://github.com/gymshark/ios-constraint-kit). Simply chain off any view you want to apply an explicit size to using `.with()` notation. You will notice we have width, height, and square extensions available. Because we are using stacks you don't need to worry about your other views. They will expand and contract where needed. You can even apply sizing to your stacks if you wish to.
 
 ---
 
@@ -239,7 +239,7 @@ VStack {
 
 ## Use of result builders
 
-With the power of result builders we can also add conditional paramaters and add things such as compact maps and for loops easily. This makes writing coding features that little bit eaier. Some use cases might be, Feature Toggling, Hiding Views, easily applying arrays to the stacks. 
+With the power of result builders, we can also add conditional parameters and add things such as compact maps and for loops easily. This makes writing coding features a little bit easier. Some use cases might be, Feature Toggling, Hiding Views, easily applying arrays to the stacks. 
 
 ---
 

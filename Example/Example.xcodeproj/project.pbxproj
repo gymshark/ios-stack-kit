@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC2EE4E526A7970A00BE58E6 /* ConstraintKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC2EE4E426A7970A00BE58E6 /* ConstraintKit */; };
 		BC4F374726A7540100B41D71 /* StackKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC4F374626A7540100B41D71 /* StackKit */; };
 		BC5020E72645EAE500E7E234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5020E62645EAE500E7E234 /* Assets.xcassets */; };
 		BC5020EA2645EAE500E7E234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5020E82645EAE500E7E234 /* LaunchScreen.storyboard */; };
@@ -62,7 +61,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4F374726A7540100B41D71 /* StackKit in Frameworks */,
-				BC2EE4E526A7970A00BE58E6 /* ConstraintKit in Frameworks */,
 				BCD6DCE626966F0B00D2E481 /* SharkUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +251,6 @@
 			packageProductDependencies = (
 				BCD6DCE526966F0B00D2E481 /* SharkUtils */,
 				BC4F374626A7540100B41D71 /* StackKit */,
-				BC2EE4E426A7970A00BE58E6 /* ConstraintKit */,
 			);
 			productName = Example;
 			productReference = BC5020DA2645EAE400E7E234 /* Example.app */;
@@ -284,7 +281,6 @@
 			mainGroup = BC5020D12645EAE400E7E234;
 			packageReferences = (
 				BCD6DCE426966F0B00D2E481 /* XCRemoteSwiftPackageReference "ios-shark-utils" */,
-				BC2EE4E326A7970A00BE58E6 /* XCRemoteSwiftPackageReference "ios-constraint-kit" */,
 			);
 			productRefGroup = BC5020DB2645EAE400E7E234 /* Products */;
 			projectDirPath = "";
@@ -526,14 +522,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BC2EE4E326A7970A00BE58E6 /* XCRemoteSwiftPackageReference "ios-constraint-kit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:gymshark/ios-constraint-kit.git";
-			requirement = {
-				kind = exactVersion;
-				version = 0.0.2;
-			};
-		};
 		BCD6DCE426966F0B00D2E481 /* XCRemoteSwiftPackageReference "ios-shark-utils" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:gymshark/ios-shark-utils.git";
@@ -545,11 +533,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BC2EE4E426A7970A00BE58E6 /* ConstraintKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BC2EE4E326A7970A00BE58E6 /* XCRemoteSwiftPackageReference "ios-constraint-kit" */;
-			productName = ConstraintKit;
-		};
 		BC4F374626A7540100B41D71 /* StackKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = StackKit;
