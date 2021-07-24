@@ -27,7 +27,7 @@ StackKit is built and maintained with love by the Gymshark Engineering Team 💙
 
 ### Note ⚠️
 
-If you are trying to use StackKit to handle large data sets to replace a UITableView or UICollection view you will run into performance issues. For this usecase you should use [SharklListKit](https://github.com/gymshark/ios-shark-list-kit) 🦈🗒
+If you are trying to use StackKit to handle large data sets to replace a UITableView or UICollection view you will run into performance issues. For this usecase you should use [ListKit](https://github.com/gymshark/ios-list-kit) 🦈🗒
 
 ## Installation
 
