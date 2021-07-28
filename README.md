@@ -37,7 +37,7 @@ To install StackKit using [Swift Package Manager](https://github.com/apple/swift
 
 \1. In Xcode, select “File” → “Swift Packages” → “Add Package Dependency”
 
-\2. Enter git@github.com:gymshark/ios-stack-kit.git
+\2. Enter https://github.com/gymshark/ios-stack-kit.git
 
 ## Getting Started
 
