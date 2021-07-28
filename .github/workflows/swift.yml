@@ -1,0 +1,19 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build for iOS
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme StackKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+    - name: Run iOS tests
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme StackKit -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
