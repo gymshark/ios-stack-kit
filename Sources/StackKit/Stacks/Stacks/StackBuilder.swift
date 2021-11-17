@@ -25,7 +25,7 @@ extension UIView {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        if useSafeArea {
+        if #available(iOS 11.0, *), useSafeArea {
             NSLayoutConstraint.activate([
                 stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: .zero),
                 stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: .zero),
