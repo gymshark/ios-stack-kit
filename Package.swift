@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "StackKit",
-    platforms: [ .iOS(.v12)],
+    platforms: [ .iOS(.v9)],
     products: [
         .library(
             name: "StackKit",

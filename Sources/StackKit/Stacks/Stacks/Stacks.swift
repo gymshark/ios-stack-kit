@@ -108,7 +108,9 @@ public extension UIStackView {
         view.backgroundColor = color
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.layer.cornerRadius = cornerRadius
-        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+		if #available(iOS 11.0, *) {
+			view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+		}
         insertSubview(view, at: 0)
         return self
     }
