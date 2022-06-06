@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "ConstraintKit",
-                 url: "git@github.com:gymshark/ios-constraint-kit.git",
+                 url: "https://github.com/gymshark/ios-constraint-kit.git",
                  .upToNextMinor(from: "0.0.2"))
     ],
     targets: [
