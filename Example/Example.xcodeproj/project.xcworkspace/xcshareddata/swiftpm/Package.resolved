@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "ConstraintKit",
-        "repositoryURL": "git@github.com:gymshark/ios-constraint-kit.git",
+        "repositoryURL": "https://github.com/gymshark/ios-constraint-kit.git",
         "state": {
           "branch": null,
-          "revision": "20069bdb8db549339d12af7836913e00597aa6d8",
-          "version": "0.0.2"
+          "revision": "404baf28a47a5cbbb9fcb59ef8c7be605e394c4a",
+          "version": "1.0.0"
         }
       },
       {
