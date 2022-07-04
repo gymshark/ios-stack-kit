@@ -8,7 +8,16 @@
 import UIKit
 
 public final class Spacer: UIView {
-
+	
+	public static func auto() -> Spacer {
+		let s = Spacer()
+		s.setContentHuggingPriority(.fittingSizeLevel, for: .horizontal)
+		s.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
+		s.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)
+		s.setContentCompressionResistancePriority(.fittingSizeLevel, for: .vertical)
+		return s
+	}
+	
     // MARK: - Init
     
     public init() {
